@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Background -->
+  <rect width="64" height="64" rx="14" fill="#0d0d0d"/>
+  
+  <!-- Gold gradient def -->
+  <defs>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f5e199"/>
+      <stop offset="50%" stop-color="#C9A96E"/>
+      <stop offset="100%" stop-color="#8b5e3c"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Crown -->
+  <path d="M12 44 L16 26 L24 34 L32 14 L40 34 L48 26 L52 44 Z" 
+        fill="url(#gold)" filter="url(#glow)" opacity="0.95"/>
+  
+  <!-- Crown dots -->
+  <circle cx="12" cy="44" r="2.5" fill="#f5e199"/>
+  <circle cx="52" cy="44" r="2.5" fill="#f5e199"/>
+  <circle cx="32" cy="14" r="2.5" fill="#f5e199"/>
+  
+  <!-- Bottom bar -->
+  <rect x="10" y="46" width="44" height="5" rx="2.5" fill="url(#gold)" opacity="0.9"/>
+</svg>
